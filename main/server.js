@@ -30,13 +30,20 @@ app.use(express.json(
 import userRoutes from "./routes/user.routes.js";
 app.use('/api/users', userRoutes);
 
-import missionVisionRoutes from './routes/missionVision.routes.js';
-app.use('/api', missionVisionRoutes);
+import poEntryRoutes from "./routes/poentry.routes.js";
+app.use("/api/user", poEntryRoutes);
 
-import psoRoutes from './routes/pso.routes.js';
-app.use('/api', psoRoutes)
-import poRoutes from './routes/po.routes.js';
-app.use('/api',poRoutes)
+import psoRoutes from "./routes/psoentry.routes.js";
+app.use("/api/user", psoRoutes);
+
+import poCoMappingRoutes from "./routes/po_co_mapping.routes.js";
+app.use("/api/user", poCoMappingRoutes);
+
+import assessmentRoutes from "./routes/assessment.routes.js";
+app.use("/api/user", assessmentRoutes);
+
+
+
 // app.use(cors({
 //     origin: "http://localhost:3000",
 //     credentials: true,

@@ -7,7 +7,6 @@ import generatetoken from "../utils/generatetoken.js";
 export const signup = async (req, res) => {
     try {
         const { username, fullname, email, password } = req.body;
-        
         if (!username || !fullname || !email || !password) {
             return res.status(400).json({ error: "All fields are required" });
         }
